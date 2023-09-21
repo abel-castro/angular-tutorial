@@ -1,5 +1,5 @@
 # AngularTutorial
-Code from https://angular.de/artikel/angular-tutorial-deutsch/
+Sources: https://angular.de/artikel/angular-tutorial-deutsch/
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
