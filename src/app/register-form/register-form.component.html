@@ -1,12 +1,5 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-        <app-email-field></app-email-field>
-        <label for="email">Email:</label>
-        <input type="email" id="email" formControlName="email" />
-        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
-            <div *ngIf="email.errors.required">Email is required.</div>
-            <div *ngIf="email.errors.email">Invalid email format.</div>
-        </div>
-    </div>
-    <button type="submit" [disabled]="registerForm.invalid">Submit</button>
+    <app-email-field [formGroup]=" registerForm"></app-email-field>
+    <app-name-field [formGroup]="registerForm"></app-name-field>
+    <button type="submit" [disabled]="!registerForm.valid">Register</button>
 </form>

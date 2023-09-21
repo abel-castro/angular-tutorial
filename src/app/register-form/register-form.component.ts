@@ -11,19 +11,21 @@ export class RegisterFormComponent {
   registerForm: FormGroup;
 
   constructor(private fb: FormBuilder) {
-    this.registerForm = this.fb.group({
-      email: ['your@email.com', [Validators.required, Validators.email]]
-    });
+    this.registerForm = this.fb.group({});
   }
 
   get email() {
     return this.registerForm.get('email');
   }
 
+  get name() {
+    return this.registerForm.get('name');
+  }
+
   onSubmit() {
     if (this.registerForm.valid) {
       console.log('Form submitted with email:', this.registerForm.value.email);
-      // Add further logic like submitting to a server
+      console.log("Passed name:", this.registerForm.value.name)
     }
   }
 }

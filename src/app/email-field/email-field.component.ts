@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-email-field',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class EmailFieldComponent {
 
+  @Input() formGroup: FormGroup;
+
+  emailControl = new FormControl('', [Validators.required, Validators.email]);
+
+  ngOnInit() {
+    this.formGroup.addControl('email', this.emailControl);
+  }
 }
