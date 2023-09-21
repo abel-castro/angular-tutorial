@@ -28,8 +28,8 @@ describe('BookCreateComponent', () => {
   });
 
   it('should add a book when onAddBook is called', () => {
-    const titleInput = fixture.debugElement.query(By.css('#newBookTitle')).nativeElement as HTMLInputElement;
-    const subtitleInput = fixture.debugElement.query(By.css('#newBookSubstitle')).nativeElement as HTMLInputElement;
+    let titleInput = fixture.debugElement.query(By.css('#newBookTitle')).nativeElement as HTMLInputElement;
+    let subtitleInput = fixture.debugElement.query(By.css('#newBookSubstitle')).nativeElement as HTMLInputElement;
 
     titleInput.value = "Title"
     subtitleInput.value = "Subtitle"
